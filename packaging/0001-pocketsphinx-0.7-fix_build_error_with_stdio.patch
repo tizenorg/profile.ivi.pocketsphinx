@@ -1,0 +1,11 @@
+diff -Naur pocketsphinx-0.7/src/gst-plugin/gstvader.h pocketsphinx-0.7-new/src/gst-plugin/gstvader.h
+--- pocketsphinx-0.7/src/gst-plugin/gstvader.h	2011-04-14 09:27:25.000000000 -0700
++++ pocketsphinx-0.7-new/src/gst-plugin/gstvader.h	2012-07-30 11:10:02.897345425 -0700
+@@ -38,6 +38,7 @@
+ #define __GST_VADER_H__
+ 
+ 
++#include <stdio.h>
+ #include <gst/gst.h>
+ #include <gst/gstevent.h>
+ 
