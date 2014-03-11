@@ -1,2 +1,5 @@
+* Tue Mar 11 2014 brianjjones <brian.j.jones@intel.com> accepted/tizen/ivi/genivi/20140131.070929@6229fcd
+- Removing gstreamer plugin
+
 * Fri Aug 31 21:53:17 UTC 2012 - jimmy.huang@intel.com
 - Intial import from upstream.

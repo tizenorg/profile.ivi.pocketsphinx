@@ -7,8 +7,8 @@ URL:        http://www.pocketsphinx.org/
 Summary:    Speech Recognition Engine
 Source:     http://sourceforge.net/projects/cmusphinx/files/%{name}/%{version}/%{name}-%{version}.tar.gz
 Patch0:     0001-pocketsphinx-0.7-fix_build_error_with_stdio.patch
-BuildRequires:  pkgconfig(gstreamer-0.10)
-BuildRequires:  pkgconfig(gstreamer-plugins-base-0.10)
+#BuildRequires:  pkgconfig(gstreamer-0.10)
+#BuildRequires:  pkgconfig(gstreamer-plugins-base-0.10)
 BuildRequires:  pkgconfig(sphinxbase)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python-setuptools
@@ -35,13 +35,13 @@ Group:          Applications/Multimedia
 %description libs
 Shared libraries for pocketsphinx executables.
 
-%package plugin
-Summary:        Pocketsphinx gstreamer plugin
-Group:          Applications/Multimedia
-Requires:       %{name}-libs = %{version}-%{release}, gst-plugins-base
+#%package plugin
+#Summary:        Pocketsphinx gstreamer plugin
+#Group:          Applications/Multimedia
+#Requires:       %{name}-libs = %{version}-%{release}, gst-plugins-base
 
-%description plugin
-A gstreamer plugin for pocketsphinx.
+#%description plugin
+#A gstreamer plugin for pocketsphinx.
 
 %package python
 Summary:        Python interface to pocketsphinx
@@ -72,7 +72,7 @@ cp -p doc/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 # Get rid of files we don't want packaged
 rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
-rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-0.10/*.la
+#rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-0.10/*.la
 rm -f doc/html/installdox
 
 %clean
@@ -99,9 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog COPYING NEWS README
 %{_libdir}/libpocketsphinx.so.*
 
-%files plugin
-%defattr(-,root,root,-)
-%{_libdir}/gstreamer-0.10/*
+#%files plugin
+#%defattr(-,root,root,-)
+#%{_libdir}/gstreamer-0.10/*
 
 %files python
 %defattr(-,root,root,-)
